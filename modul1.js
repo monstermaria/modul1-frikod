@@ -9,7 +9,10 @@ body.appendChild(header);
 // create a p tag with port info
 const p = document.createElement("p");
 console.log(location.href);
-p.innerText = "Denna sida servas av port " + location.port;
+p.innerText = "Information om anslutningen\nServer: " + location.hostname
+                + "\nSökväg: " + location.pathname.slice(1)
+                + "\nPort: " + location.port
+                + "\nProtokoll: " + location.protocol.slice(0,-1);
 body.appendChild(p);
 
 // create a header with instructions
